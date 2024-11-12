@@ -1,9 +1,9 @@
-const fetchAndProcessPDF = require("./scraper"); 
+const fetchAndProcessPDF = require("./scraper");
 const sendEmail = require("./sendEmail");
 
 async function main() {
   try {
-    const languageData = await fetchAndProcessPDF(); 
+    const languageData = await fetchAndProcessPDF();
     await sendEmail(languageData);
     console.log("Dados enviados com sucesso!");
   } catch (error) {
